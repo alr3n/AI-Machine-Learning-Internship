@@ -1,0 +1,38 @@
+# Output copied verbatim from the executed Colab notebook "Predicts Air Quality" (stdout of cells 2-5).
+
+Encoded Classes: {0: 'Good', 1: 'Hazardous', 2: 'Moderate', 3: 'Poor'}
+Training set shape: (4000, 9)
+Testing set shape: (1000, 9)
+
+--- Model Evaluation ---
+Logistic Regression - Balanced Accuracy: 0.8906
+Random Forest - Balanced Accuracy: 0.9175
+
+XGBoost - Balanced Accuracy: 0.9204
+
+Selected XGBoost for detailed evaluation.
+
+
+Classification Report for XGBoost:
+
+              precision    recall  f1-score   support
+
+        Good       1.00      1.00      1.00       400
+   Hazardous       0.88      0.83      0.86       100
+    Moderate       0.96      0.97      0.96       300
+        Poor       0.88      0.89      0.88       200
+
+    accuracy                           0.95      1000
+   macro avg       0.93      0.92      0.92      1000
+weighted avg       0.95      0.95      0.95      1000
+
+
+
+--- Inference Result ---
+predicted_category: Moderate
+confidence_score: 0.9995660185813904
+all_probabilities:
+  Good: 0.0004
+  Hazardous: 0.0000
+  Moderate: 0.9996
+  Poor: 0.0000
